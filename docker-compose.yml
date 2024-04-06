@@ -1,0 +1,6 @@
+services:
+  flare-mainnet:
+    restart: always
+    image: flarefoundation/go-flare:v1.7.1807
+    logging:
+      driver: local
