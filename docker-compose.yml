@@ -4,3 +4,23 @@ services:
     image: flarefoundation/go-flare:v1.7.1807
     logging:
       driver: local
+    environment:
+      - NETWORK_ID=flare
+      - AUTOCONFIGURE_BOOTSTRAP=1
+      - AUTOCONFIGURE_BOOTSTRAP_ENDPOINT='https://flare.flare.network/ext/info'
+    volumes:
+      - "flare-db:/app/db"
+      - "flare-logs:/app/logs"
+      - "flare-conf:/app/conf"
+    ports:
+      # external/public port for basic HTTP is 9650 by default
+      # exposed locally for use by bot on same machine
+      - "127.0.0.1::9650"
+
+volumes:
+  flare-db:
+    external: true
+  flare-logs:
+    external: true
+  flare-conf:
+    external: true
