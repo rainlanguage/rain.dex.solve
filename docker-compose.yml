@@ -31,6 +31,7 @@ services:
       - ARB_ADDRESS=${ARB_ADDRESS}
       - ORDERBOOK_ADDRESS=${ORDERBOOK_ADDRESS}
       - MODE=suniv2
+      - SUBGRAPH=${SUBGRAPH}
     profiles: ["flare", "flare-bot"]
 
 volumes:
