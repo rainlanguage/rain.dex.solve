@@ -28,6 +28,7 @@ services:
       - RPC_URL=http://flare-mainnet:9650
       - BOT_WALLET_PRIVATEKEY=${BOT_WALLET_PRIVATEKEY}
       - ARB_ADDRESS=${ARB_ADDRESS}
+      - ORDERBOOK_ADDRESS=${ORDERBOOK_ADDRESS}
 
 volumes:
   flare-db:
