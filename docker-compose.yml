@@ -1,13 +1,15 @@
 services:
   flare-mainnet:
     restart: always
-    image: flarefoundation/go-flare:v1.7.1807
+    # image: flarefoundation/go-flare:v1.7.1807
+    pull_policy: always
+    image: thedavidmeister/go-flare
     logging:
       driver: local
     environment:
       - NETWORK_ID=flare
       - AUTOCONFIGURE_BOOTSTRAP=1
-      - AUTOCONFIGURE_BOOTSTRAP_ENDPOINT='https://flare.flare.network/ext/info'
+      - AUTOCONFIGURE_BOOTSTRAP_ENDPOINT=https://flare.flare.network/ext/info
     volumes:
       - "flare-db:/app/db"
       - "flare-logs:/app/logs"
