@@ -32,6 +32,8 @@ services:
       - ORDERBOOK_ADDRESS=${ORDERBOOK_ADDRESS}
       - MODE=suniv2
       - SUBGRAPH=${SUBGRAPH}
+      # Default to 0 because the default is hitting a local RPC.
+      - SLEEP=${SLEEP:-0}
     profiles: ["flare", "flare-bot"]
 
 volumes:
