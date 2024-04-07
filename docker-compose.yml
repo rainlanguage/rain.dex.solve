@@ -18,8 +18,9 @@ services:
       # external/public port for basic HTTP is 9650 by default
       # exposed locally for use by bot on same machine
       - "0.0.0.0::9650"
+    profiles: ["flare", "flare-node"]
 
-  arb-bot:
+  flare-bot:
     restart: always
     image: rainprotocol/arb-bot:master
     logging:
@@ -30,6 +31,7 @@ services:
       - ARB_ADDRESS=${ARB_ADDRESS}
       - ORDERBOOK_ADDRESS=${ORDERBOOK_ADDRESS}
       - MODE=suniv2
+    profiles: ["flare", "flare-bot"]
 
 volumes:
   flare-db:
