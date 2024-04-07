@@ -25,7 +25,7 @@ services:
     logging:
       driver: local
     environment:
-      - RPC_URL: http://flare-mainnet:9650
+      - RPC_URL: "http://flare-mainnet:9650"
 
 volumes:
   flare-db:
