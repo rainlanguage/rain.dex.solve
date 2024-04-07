@@ -26,6 +26,7 @@ services:
       driver: local
     environment:
       - RPC_URL=http://flare-mainnet:9650
+      - BOT_WALLET_PRIVATEKEY=${BOT_WALLET_PRIVATEKEY}
 
 volumes:
   flare-db:
