@@ -1,8 +1,12 @@
 # rain.dex.solve
 
+This repo composes various options for solving Raindex. By design there are no
+implementations in this repo
+
 ## Docker compose
 
-Pruning orphans is useful if we accidentally modify the compose file while containers are still running.
+Pruning orphans is useful if we accidentally modify the compose file while
+containers are still running.
 E.g. if we git pull before pulling them down.
 
 Start:

@@ -24,6 +24,8 @@ services:
     image: rainprotocol/arb-bot:master
     logging:
       driver: local
+    environment:
+      - RPC_URL: http://flare-mainnet:9650
 
 volumes:
   flare-db:
