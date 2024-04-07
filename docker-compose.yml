@@ -21,7 +21,7 @@ services:
 
   arb-bot:
     restart: always
-    image: rainprotocol/arb-bot:main
+    image: rainprotocol/arb-bot:master
     logging:
       driver: local
 
