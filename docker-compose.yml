@@ -25,7 +25,7 @@ services:
     logging:
       driver: local
     environment:
-      - RPC_URL=http://flare-mainnet:9650
+      - RPC_URL=http://flare-mainnet:9650/ext/bc/C/rpc
       - BOT_WALLET_PRIVATEKEY=${BOT_WALLET_PRIVATEKEY}
       - ARB_ADDRESS=${ARB_ADDRESS}
       - ORDERBOOK_ADDRESS=${ORDERBOOK_ADDRESS}
