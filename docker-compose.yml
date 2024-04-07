@@ -17,6 +17,12 @@ services:
       # exposed locally for use by bot on same machine
       - "127.0.0.1::9650"
 
+  arb-bot:
+    restart: always
+    image: rainprotocol/arb-bot:main
+    logging:
+      driver: local
+
 volumes:
   flare-db:
     external: true
