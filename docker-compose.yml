@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:master
+    image: rainprotocol/arb-bot:gray-turntable
     logging:
       driver: local
     environment:
@@ -34,6 +34,8 @@ services:
       - SUBGRAPH=${SUBGRAPH}
       # Default to 0 because the default is hitting a local RPC.
       - SLEEP=${SLEEP:-0}
+      - HYPERDX_API_KEY=${HYPERDX_API_KEY:-}
+      - TRACER_SERVICE_NAME=${TRACER_SERVICE_NAME:-}
     profiles: ["flare", "flare-bot"]
 
 volumes:
