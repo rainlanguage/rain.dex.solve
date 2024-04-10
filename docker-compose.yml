@@ -30,12 +30,12 @@ services:
       - BOT_WALLET_PRIVATEKEY=${BOT_WALLET_PRIVATEKEY}
       - ARB_ADDRESS=${ARB_ADDRESS}
       - ORDERBOOK_ADDRESS=${ORDERBOOK_ADDRESS}
-      - MODE=suniv2
       - SUBGRAPH=${SUBGRAPH}
       # Default to 0 because the default is hitting a local RPC.
       - SLEEP=${SLEEP:-0}
       - HYPERDX_API_KEY=${HYPERDX_API_KEY:-}
       - TRACER_SERVICE_NAME=${TRACER_SERVICE_NAME:-}
+      - INTERPRETERV2=true
     profiles: ["flare", "flare-bot"]
 
 volumes:
