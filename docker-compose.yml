@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:tossing-hamstring
+    image: rainprotocol/arb-bot:fumbling-tryout
     logging:
       driver: local
     environment:
