@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:curving-crux
+    image: rainprotocol/arb-bot:shrink-ribbon
     logging:
       driver: local
     environment:
@@ -38,6 +38,9 @@ services:
       - INTERPRETERV2=true
       - MAX_RATIO=true
       - NO_BUNDLE=true
+      - RP3_2=true
+      # transaction timeout to not get stuck on a pending tx
+      - TIMEOUT=600
     profiles: ["flare", "flare-bot"]
 
 volumes:
