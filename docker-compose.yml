@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:2024-04-15-debug-otel-timeout-issue-2
+    image: rainprotocol/arb-bot:curving-crux
     logging:
       driver: local
     environment:
