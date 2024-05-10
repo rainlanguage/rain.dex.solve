@@ -35,10 +35,8 @@ services:
       - SLEEP=${SLEEP:-0}
       - HYPERDX_API_KEY=${HYPERDX_API_KEY:-}
       - TRACER_SERVICE_NAME=${TRACER_SERVICE_NAME:-}
-      - INTERPRETERV2=true
       - MAX_RATIO=true
       - NO_BUNDLE=true
-      - RP3_2=true
       # transaction timeout to not get stuck on a pending tx
       - TIMEOUT=600
     profiles: ["flare", "flare-bot"]
