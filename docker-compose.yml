@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:mile-button
+    image: rainprotocol/arb-bot:2024-05-15-sg-json-order-details
     logging:
       driver: local
     environment:
