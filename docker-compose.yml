@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:2024-05-15-sg-json-order-details
+    image: rainprotocol/arb-bot:2024-05-16-vault-balance-based-discovery
     logging:
       driver: local
     environment:
@@ -39,7 +39,7 @@ services:
       - NO_BUNDLE=true
       # transaction timeout to not get stuck on a pending tx
       - TIMEOUT=600
-      - HOPS=${BINARY_SEARCH_HOPS:-1}
+      - HOPS=${BINARY_SEARCH_HOPS:-3}
     profiles: ["flare", "flare-bot"]
 
 volumes:
