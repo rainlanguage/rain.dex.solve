@@ -39,7 +39,7 @@ services:
       - NO_BUNDLE=true
       # transaction timeout to not get stuck on a pending tx
       - TIMEOUT=600
-      - HOPS=${BINARY_SEARCH_HOPS:-3}
+      - HOPS=${BINARY_SEARCH_HOPS:-1}
     profiles: ["flare", "flare-bot"]
 
 volumes:
