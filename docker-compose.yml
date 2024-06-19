@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:breakfast-lighter
+    image: rainprotocol/arb-bot:flu-module
     pull_policy: always
     logging:
       driver: local
