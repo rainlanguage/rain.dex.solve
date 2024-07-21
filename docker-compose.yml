@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:green-drive
+    image: rainprotocol/arb-bot:obv3
     pull_policy: always
     logging:
       driver: local
