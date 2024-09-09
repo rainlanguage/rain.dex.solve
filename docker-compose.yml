@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:obv3
+    image: rainprotocol/arb-bot:2024-09-03-remove-memoize
     pull_policy: always
     logging:
       driver: local
