@@ -40,6 +40,7 @@ services:
       # transaction timeout to not get stuck on a pending tx
       - TIMEOUT=600
       - HOPS=${BINARY_SEARCH_HOPS:-1}
+      - BOT_MIN_BALANCE=${BOT_MIN_BALANCE}
     profiles: ["flare", "flare-bot"]
 
 volumes:
