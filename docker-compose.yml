@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:obv3
+    image: rainprotocol/arb-bot:master
     pull_policy: always
     logging:
       driver: local
@@ -30,14 +30,13 @@ services:
       - RPC_URL=${RPC_URL:-http://flare-mainnet:9650/ext/bc/C/rpc}
       - BOT_WALLET_PRIVATEKEY=${BOT_WALLET_PRIVATEKEY}
       - ARB_ADDRESS=${ARB_ADDRESS}
-      - ORDERBOOK_ADDRESS=${ORDERBOOK_ADDRESS}
+      - GENERIC_ARB_ADDRESS=${GENERIC_ARB_ADDRESS:-}
       - SUBGRAPH=${SUBGRAPH}
       # Default to 0 because the default is hitting a local RPC.
       - SLEEP=${SLEEP:-0}
       - HYPERDX_API_KEY=${HYPERDX_API_KEY:-}
       - TRACER_SERVICE_NAME=${TRACER_SERVICE_NAME:-}
       - MAX_RATIO=true
-      - NO_BUNDLE=true
       # transaction timeout to not get stuck on a pending tx
       - TIMEOUT=600
       - HOPS=${BINARY_SEARCH_HOPS:-1}
