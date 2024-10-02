@@ -37,8 +37,6 @@ services:
       - HYPERDX_API_KEY=${HYPERDX_API_KEY:-}
       - TRACER_SERVICE_NAME=${TRACER_SERVICE_NAME:-}
       - MAX_RATIO=true
-      # transaction timeout to not get stuck on a pending tx
-      - TIMEOUT=${TIMEOUT:-}
       - HOPS=${BINARY_SEARCH_HOPS:-1}
       - BOT_MIN_BALANCE=${BOT_MIN_BALANCE}
     profiles: ["flare", "flare-bot"]
