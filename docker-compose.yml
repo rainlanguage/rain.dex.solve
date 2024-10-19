@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:master
+    image: rainprotocol/arb-bot:copper-head
     pull_policy: always
     logging:
       driver: local
@@ -37,10 +37,11 @@ services:
       - HYPERDX_API_KEY=${HYPERDX_API_KEY:-}
       - TRACER_SERVICE_NAME=${TRACER_SERVICE_NAME:-}
       - MAX_RATIO=true
-      # transaction timeout to not get stuck on a pending tx
-      - TIMEOUT=600
       - HOPS=${BINARY_SEARCH_HOPS:-1}
       - BOT_MIN_BALANCE=${BOT_MIN_BALANCE}
+      # bot owned vaults to be auto topup, mainly used for canary to be auto topped up, example:
+      # token1,vaultid1,threshold,topupamount;token2,vaultid2,threshold,topupamount;...
+      - SELF_FUND_ORDERS=${SELF_FUND_ORDERS:-}
     profiles: ["flare", "flare-bot"]
 
 volumes:
