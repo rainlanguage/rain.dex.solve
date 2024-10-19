@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:dog-wire
+    image: rainprotocol/arb-bot:copper-head
     pull_policy: always
     logging:
       driver: local
@@ -39,6 +39,9 @@ services:
       - MAX_RATIO=true
       - HOPS=${BINARY_SEARCH_HOPS:-1}
       - BOT_MIN_BALANCE=${BOT_MIN_BALANCE}
+      # bot owned vaults to be auto topup, mainly used for canary to be auto topped up, example:
+      # token1,vaultid1,threshold,topupamount;token2,vaultid2,threshold,topupamount;...
+      - SELF_FUND_ORDERS=${SELF_FUND_ORDERS:-}
     profiles: ["flare", "flare-bot"]
 
 volumes:
