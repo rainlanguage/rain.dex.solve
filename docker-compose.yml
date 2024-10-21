@@ -22,7 +22,7 @@ services:
 
   flare-bot:
     restart: always
-    image: rainprotocol/arb-bot:copper-head
+    image: rainprotocol/arb-bot:hot-bin
     pull_policy: always
     logging:
       driver: local
