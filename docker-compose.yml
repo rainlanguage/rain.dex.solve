@@ -37,6 +37,8 @@ services:
       - HYPERDX_API_KEY=${HYPERDX_API_KEY:-}
       - TRACER_SERVICE_NAME=${TRACER_SERVICE_NAME:-}
       - MAX_RATIO=true
+      # optional timeout for read calls, default is 30 sec if not set
+      - TIMEOUT=${TIMEOUT:-}
       - HOPS=${BINARY_SEARCH_HOPS:-1}
       - BOT_MIN_BALANCE=${BOT_MIN_BALANCE}
       # bot owned vaults to be auto topup, mainly used for canary to be auto topped up, example:
